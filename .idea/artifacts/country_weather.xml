@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="country_weather">
+    <output-path>$PROJECT_DIR$/out/artifacts/country_weather</output-path>
+    <root id="archive" name="country_weather.jar">
+      <element id="module-output" name="Weather" />
+    </root>
+  </artifact>
+</component>
