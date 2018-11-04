@@ -3,6 +3,7 @@ package com.weather.country_weather;
 /**
  * Created by admin on 2018/10/30.
  */
+import com.weather.constants.Constants;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
@@ -76,7 +77,7 @@ public class CountryWeather_mrOps {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             //使用文件名作为key文件中的字段作为value输出
-            if (filename.equals("adcode")) {
+            if (filename.equals(Constants.ADCODE_FILE_NAME)) {
                 //System.out.println("adcode value: " + value.toString());
                 String[] codes = value.toString().trim().split("\\t");
                 String adcode = codes[0];
@@ -96,7 +97,8 @@ public class CountryWeather_mrOps {
                 String rhu = factor[14];
                 String ssd = factor[19];
                 String pre = factor[9];
-                if (!asn.equals("V01301")&&!tem.equals("999999.0000")&&!rhu.equals("999999.0000")&&!ssd.equals("999999.0000")&&!pre.equals("999999.0000")){
+                if (!asn.equals(Constants.ASN_FIELD_NAME)&&!tem.equals(Constants.FACTOR_DEFAULT_VALUE_STR)&&!rhu.equals(Constants.FACTOR_DEFAULT_VALUE_STR)
+                        &&!ssd.equals(Constants.FACTOR_DEFAULT_VALUE_STR)&&!pre.equals(Constants.FACTOR_DEFAULT_VALUE_STR)){
                     //System.out.println("map month: " + month);
                     //使用组合key可以进行省份和月份的归并
                     context.write(new Text(filename + "_" + month), new FactorsWritable(filename, "",
@@ -125,7 +127,7 @@ public class CountryWeather_mrOps {
         @Override
         protected void reduce(Text key, Iterable<FactorsWritable> values, Context context) throws IOException, InterruptedException {
             //System.out.println("in reduce");
-            if (key.toString().equals("adcode")) {
+            if (key.toString().equals(Constants.ADCODE_FILE_NAME)) {
                 //System.out.println("adcode key" + key.toString());
                 //!!!实现了Writable接口的类型在foreach循环的时候只会产生一个对象
                 //即这里的f是同一个对象所以最后codeList里面的数据也会只有一个对象的数据
@@ -275,7 +277,7 @@ public class CountryWeather_mrOps {
                     tem + " " +
                     rhu + " " +
                     ssd + " " +
-                    pre + " ";
+                    pre;
         }
 
         public String getProvince() {
@@ -320,7 +322,7 @@ public class CountryWeather_mrOps {
 
         @Override
         public int compareTo(FactorsWritable o) {
-            return this.getMonth().compareTo(o.getMonth());
+            return Integer.valueOf(this.getMonth()).compareTo(Integer.valueOf(o.getMonth()));
         }
     }
 

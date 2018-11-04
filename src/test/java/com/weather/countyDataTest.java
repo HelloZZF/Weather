@@ -23,5 +23,7 @@ public class countyDataTest {
         System.out.println(Float.valueOf(e[9]));
 
         //System.out.println(Float.valueOf(e[14])/2);
+        System.out.println("-------");
+        System.out.println(Float.valueOf("999999.0000"));
     }
 }
