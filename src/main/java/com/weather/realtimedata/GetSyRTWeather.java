@@ -1,0 +1,129 @@
+package com.weather.realtimedata;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.weather.constants.Constants;
+import com.weather.domain.SyRealTime;
+import com.weather.util.HttpUtil;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class GetSyRTWeather extends Thread {
+	
+	private static final Random random = new Random();
+	
+	private Producer<Integer, String> producer;
+	
+	public GetSyRTWeather() {
+		Properties properties = new Properties();
+		try {
+			properties.load(GetSyRTWeather.class.getClassLoader().getResourceAsStream("kafka/producer.properties"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		producer = new KafkaProducer<Integer, String>(properties);
+		//getWeatherData();
+	}
+
+	public String getWeatherData() {
+
+        Calendar c = Calendar.getInstance();
+        int year = c.get(Calendar.YEAR);
+        //这里的月份是从0开始计数的所以要加一
+        int month = c.get(Calendar.MONTH) + 1;
+        String monthStr = add0(month);
+        int date = c.get(Calendar.DATE);
+        String dateStr = add0(date);
+        //如果是UTC时间的话要减去8小时的时差
+        int hour = c.get(Calendar.HOUR_OF_DAY) - 9;
+        String hourStr = add0(hour);
+        String time = year + "" + monthStr + "" + dateStr + "" + hourStr + "0000";
+
+        //气象局坑爹啊，这个api只能获取当前时间之前7/8个小时的数据,也有可能是UTC世界统一时间
+		String json =  HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=541311836471YeEp7&pwd=d1CvKmk" +
+								"&dataFormat=json" +
+								"&interfaceId=getSurfEleByTimeRangeAndStaID" +
+								"&dataCode=SURF_CHN_MUL_HOR" +
+								"&timeRange=["+ time + "," + time + "]" +
+								"&staIDs=59945" +
+								"&elements=Station_Id_C,Year,Mon,Day,Hour,PRS,PRS_Sea,PRS_Max,PRS_Min,TEM,TEM_Max,TEM_Min,RHU,RHU_Min,PRE_1h," +
+								"WIN_S_Max,WIN_D_S_Max,WIN_S_Avg_2mi,WIN_D_Avg_2mi,tigan,VIS");
+        JSONObject jsonAll = JSON.parseObject(json);
+        if (!jsonAll.getString("returnCode").equals("0")) {
+            return null;
+        }
+        JSONArray jsonDS = JSON.parseArray(jsonAll.get("DS").toString());
+        JSONObject jsonFactor = JSON.parseObject(jsonDS.get(0).toString());
+
+        String radjson = HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=541316257016cvFvg&pwd=VJZfqQj" +
+                                "&dataFormat=json" +
+                                "&interfaceId=getRadiEleByTimeRangeAndStaID" +
+                                "&dataCode=RADI_CHN_MUL_HOR2400" +
+                                "&timeRange=["+ time + "," + time + "]" +
+                                "&staIds=59945" +
+                                "&elements=V14311,V14320");
+        JSONObject radjsonAll = JSON.parseObject(radjson);
+        String rad = "0";
+        if (radjsonAll.getString("returnCode").equals("0")) {
+            JSONArray radjsonDS = JSON.parseArray(radjsonAll.get("DS").toString());
+            JSONObject radjsonFactor = JSON.parseObject(radjsonDS.get(0).toString());
+            rad = radjsonFactor.getString("V14311");
+        }
+
+
+
+
+        String result = jsonFactor.getString("Year") + " " + jsonFactor.getString("Mon") + " " +
+                jsonFactor.getString("Day") + " " + jsonFactor.getString("Hour") + " " +
+                jsonFactor.getString("PRS") + " " + jsonFactor.getString("PRS_Sea") + " " +
+                jsonFactor.getString("PRS_Max") + " " + jsonFactor.getString("PRS_Min") + " " +
+                jsonFactor.getString("TEM") + " " + jsonFactor.getString("TEM_Max") + " " +
+                jsonFactor.getString("TEM_Min") + " " + jsonFactor.getString("tigan") + " " +
+                jsonFactor.getString("RHU") + " " + jsonFactor.getString("RHU_Min") + " " +
+                jsonFactor.getString("PRE_1h") + " " + jsonFactor.getString("WIN_S_Max") + " " +
+                jsonFactor.getString("WIN_D_S_Max") + " " + jsonFactor.getString("WIN_S_Avg_2mi") + " " +
+                jsonFactor.getString("WIN_D_Avg_2mi") + " " + jsonFactor.getString("VIS")
+                + " " + rad;
+        return result;
+
+	}
+
+	public String add0(int i) {
+	    String s = i + "";
+	    if (i < 10) {
+	        s = "0" + i;
+        }
+        return s;
+    }
+	
+	public void run() {
+		while(true) {	
+
+			producer.send(new ProducerRecord<Integer, String>(Constants.SYRT_TOPIC, getWeatherData()));
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}  
+		}
+	}
+	
+	/**
+	 * 启动Kafka Producer
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		GetSyRTWeather producer = new GetSyRTWeather();
+//		String data = producer.getWeatherData();
+//		System.out.println(data);
+		producer.start();
+	}
+	
+}

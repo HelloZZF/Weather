@@ -6,8 +6,7 @@ import java.io.Serializable;
  * Created by admin on 2018/11/4.
  */
 public class SyRealTime implements Serializable{
-    //数据量大用long
-    private long id;
+
     private String city;
     private String year;
     private int month;
@@ -31,10 +30,9 @@ public class SyRealTime implements Serializable{
     private float vis;
     private float radiation;
 
-    public SyRealTime(long id, String city, String year, int month, int day, int hour, float prs, float prs_sea, float prs_max, float prs_min, float tem, float tem_max, float tem_min, float tigan, float rhu, float rhu_min, float pre_1h, float win_s_max, String win_d_s_max, float win_s_avg_2mi, String win_d_avg_2mi, float vis, float radiation) {
-        this.id = id;
+    public SyRealTime(String city, String Year, int month, int day, int hour, float prs, float prs_sea, float prs_max, float prs_min, float tem, float tem_max, float tem_min, float tigan, float rhu, float rhu_min, float pre_1h, float win_s_max, String win_d_s_max, float win_s_avg_2mi, String win_d_avg_2mi, float vis, float radiation) {
         this.city = city;
-        this.year = year;
+        this.year = Year;
         this.month = month;
         this.day = day;
         this.hour = hour;
@@ -60,7 +58,6 @@ public class SyRealTime implements Serializable{
     @Override
 public String toString() {
         return "SyRealTime{" +
-                "id=" + id +
                 ", city='" + city + '\'' +
                 ", year='" + year + '\'' +
                 ", month=" + month +
@@ -84,14 +81,6 @@ public String toString() {
                 ", vis=" + vis +
                 ", radiation=" + radiation +
                 '}';
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getCity() {

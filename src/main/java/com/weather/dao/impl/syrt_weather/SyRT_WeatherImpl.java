@@ -17,8 +17,10 @@ public class SyRT_WeatherImpl implements SyRT_WeatherDao{
     public void insert(SyRealTime st) {
         try {
             QueryRunner qr = new QueryRunner(DBCPUtil.getDataSource());
-            String sql = "insert into syrt_weather values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-            qr.update(sql, st.getId(),st.getCity(),st.getYear(),st.getMonth(),st.getDay(),st.getHour(),
+            String fields = "city,year,month,day,hour,prs,prs_sea,prs_max,prs_min,tem,tem_max,tem_min,tigan," +
+                    "rhu,rhu_min,pre_1h,win_s_max,win_d_s_max,win_s_avg_2mi,win_d_avg_2mi,vis,radiation";
+            String sql = "insert into syrt_weather (" + fields + ") values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            qr.update(sql, st.getCity(),st.getYear(),st.getMonth(),st.getDay(),st.getHour(),
                 st.getPrs(),st.getPrs_sea(),st.getPrs_max(),st.getPrs_min(),
                     st.getTem(),st.getTem_max(),st.getTem_min(),st.getTigan(),
                     st.getRhu(),st.getRhu_min(),st.getPre_1h(),

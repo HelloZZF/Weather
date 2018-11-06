@@ -7,7 +7,6 @@ import com.weather.domain.SyRealTime;
  * Created by admin on 2018/11/4.
  */
 public class databaseTest {
-    private long id;
     private String city;
     private String year;
     private int month;
@@ -32,7 +31,7 @@ public class databaseTest {
     private float radiation;
 
     public static void main(String[] args) {
-        SyRealTime st = new SyRealTime(0,"sanya","2018",11,04,22,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,
+        SyRealTime st = new SyRealTime("sanya","2018",11,04,22,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,
                 1.0f,1.0f,1.0f,1.0f,1.0f,"111",1.0f,"111",1.0f,1.0f);
         SyRT_WeatherImpl imp = new SyRT_WeatherImpl();
         imp.insert(st);

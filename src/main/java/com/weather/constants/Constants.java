@@ -41,6 +41,8 @@ public interface Constants {
 
     String KAFKA_METADATA_BROKER_LIST = "kafka.metadata.broker.list";
     String KAFKA_TOPICS = "kafka.topics";
+    String SYRT_TOPIC = "sanya_realtime_weather_topic";
+    String SPARK_APP_NAME_SYRT = "SanYaRealTimeWeatherAPP";
     /**
      * 数据中的缺省值
      */
@@ -54,6 +56,7 @@ public interface Constants {
      * adcode 文件名
      */
     String ADCODE_FILE_NAME = "adcode";
+
 
 
 
