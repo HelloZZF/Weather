@@ -55,8 +55,12 @@ public class SyRealTime implements Serializable{
         this.radiation = radiation;
     }
 
+    public SyRealTime() {
+
+    }
+
     @Override
-public String toString() {
+    public String toString() {
         return "SyRealTime{" +
                 ", city='" + city + '\'' +
                 ", year='" + year + '\'' +

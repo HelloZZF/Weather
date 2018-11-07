@@ -16,11 +16,14 @@ import java.util.*;
 
 public class GetSyRTWeather extends Thread {
 	
-	private static final Random random = new Random();
+	private ArrayList<String> timelist;
 	
 	private Producer<Integer, String> producer;
+
+	private int flag = 0;
 	
 	public GetSyRTWeather() {
+		timelist = new ArrayList<>();
 		Properties properties = new Properties();
 		try {
 			properties.load(GetSyRTWeather.class.getClassLoader().getResourceAsStream("kafka/producer.properties"));
@@ -30,20 +33,39 @@ public class GetSyRTWeather extends Thread {
 		producer = new KafkaProducer<Integer, String>(properties);
 		//getWeatherData();
 	}
+	//循环返回当前日期的每个小时和前一天的每个小时
+	public String TimeList() {
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		//这里的月份是从0开始计数的所以要加一
+		int month = c.get(Calendar.MONTH) + 1;
+		String monthStr = add0(month);
+		int date = c.get(Calendar.DATE);
+		String dateStr = add0(date);
+		//如果是UTC时间的话要减去8小时的时差
+		int hour = c.get(Calendar.HOUR_OF_DAY);
+		if ( hour >= 9) {
+			hour = hour - 9;
+		}
+		String hourStr = add0(hour);
 
-	public String getWeatherData() {
+		for (int i = 0; i <= 23; i++) {
+			int predate = c.get(Calendar.DATE) - 1;
+			String predateStr = add0(predate);
+			String pretime = year + "" + monthStr + "" + predateStr + "" + add0(i) + "0000";
+			timelist.add(pretime);
+		}
 
-        Calendar c = Calendar.getInstance();
-        int year = c.get(Calendar.YEAR);
-        //这里的月份是从0开始计数的所以要加一
-        int month = c.get(Calendar.MONTH) + 1;
-        String monthStr = add0(month);
-        int date = c.get(Calendar.DATE);
-        String dateStr = add0(date);
-        //如果是UTC时间的话要减去8小时的时差
-        int hour = c.get(Calendar.HOUR_OF_DAY) - 9;
-        String hourStr = add0(hour);
-        String time = year + "" + monthStr + "" + dateStr + "" + hourStr + "0000";
+		for (int i = 0; i <= hour; i++) {
+			String time = year + "" + monthStr + "" + dateStr + "" + add0(i) + "0000";
+			timelist.add(time);
+		}
+
+
+		return flag == timelist.size() ? timelist.get(flag - timelist.size()) : timelist.get(flag++);
+	}
+
+	public String getWeatherData(String time) {
 
         //气象局坑爹啊，这个api只能获取当前时间之前7/8个小时的数据,也有可能是UTC世界统一时间
 		String json =  HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=541311836471YeEp7&pwd=d1CvKmk" +
@@ -77,9 +99,7 @@ public class GetSyRTWeather extends Thread {
         }
 
 
-
-
-        String result = jsonFactor.getString("Year") + " " + jsonFactor.getString("Mon") + " " +
+        String result = "sanya" + " " +jsonFactor.getString("Year") + " " + jsonFactor.getString("Mon") + " " +
                 jsonFactor.getString("Day") + " " + jsonFactor.getString("Hour") + " " +
                 jsonFactor.getString("PRS") + " " + jsonFactor.getString("PRS_Sea") + " " +
                 jsonFactor.getString("PRS_Max") + " " + jsonFactor.getString("PRS_Min") + " " +
@@ -105,10 +125,10 @@ public class GetSyRTWeather extends Thread {
 	public void run() {
 		while(true) {	
 
-			producer.send(new ProducerRecord<Integer, String>(Constants.SYRT_TOPIC, getWeatherData()));
+			producer.send(new ProducerRecord<Integer, String>(Constants.SYRT_TOPIC, getWeatherData(TimeList())));
 			
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}  

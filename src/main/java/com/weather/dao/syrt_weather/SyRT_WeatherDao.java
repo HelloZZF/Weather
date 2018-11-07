@@ -7,4 +7,5 @@ import com.weather.domain.SyRealTime;
  */
 public interface SyRT_WeatherDao {
     void insert(SyRealTime st);
+    void delectAll();
 }

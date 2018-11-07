@@ -34,6 +34,7 @@ public class databaseTest {
         SyRealTime st = new SyRealTime("sanya","2018",11,04,22,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,
                 1.0f,1.0f,1.0f,1.0f,1.0f,"111",1.0f,"111",1.0f,1.0f);
         SyRT_WeatherImpl imp = new SyRT_WeatherImpl();
+        imp.delectAll();
         imp.insert(st);
     }
 }

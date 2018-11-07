@@ -4,6 +4,7 @@ import com.weather.dao.syrt_weather.SyRT_WeatherDao;
 import com.weather.domain.SyRealTime;
 import com.weather.util.DBCPUtil;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,6 +28,18 @@ public class SyRT_WeatherImpl implements SyRT_WeatherDao{
                     st.getWin_s_max(),st.getWin_d_s_max(),st.getWin_s_avg_2mi(),st.getWin_d_avg_2mi(),
                     st.getVis(),st.getRadiation());
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void delectAll() {
+
+        try {
+            QueryRunner qr = new QueryRunner(DBCPUtil.getDataSource());
+            String sql = "truncate table syrt_weather";
+            qr.update(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }

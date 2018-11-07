@@ -28,17 +28,21 @@ object SyRealTimeWeather_Ops {
         //获取kafka中对应字段的数据,默认从kafka获得的数据key为空
         val syRealTimeDStream:InputDStream[(String, String)] = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topics)
         syRealTimeDStream.print()
-        syRealTimeDStream.transform(rdd => {
-            rdd.map(tuple => {
-                val factor = tuple._2.split(" ")
-                val sw = new SyRT_WeatherImpl()
-                sw.insert(new SyRealTime(factor(0),factor(1),factor(2).toInt,factor(3).toInt,factor(4).toInt
-                ,factor(5).toFloat,factor(6).toFloat,factor(7).toFloat,factor(8).toFloat,factor(9).toFloat
-                ,factor(10).toFloat,factor(11).toFloat,factor(12).toFloat,factor(13).toFloat,factor(14).toFloat
-                ,factor(15).toFloat,factor(16).toFloat,factor(17),factor(18).toFloat,factor(19),factor(20).toFloat,factor(21).toFloat))
-            })
-            null
+
+        syRealTimeDStream.foreachRDD(rdd => {
+            if (!rdd.isEmpty()) {
+                rdd.foreach(tuple => {
+                    val factor = tuple._2.split(" ")
+                    val sw = new SyRT_WeatherImpl()
+                    sw.delectAll()
+                    sw.insert(new SyRealTime(factor(0),factor(1),factor(2).toInt,factor(3).toInt,factor(4).toInt
+                        ,factor(5).toFloat,factor(6).toFloat,factor(7).toFloat,factor(8).toFloat,factor(9).toFloat
+                        ,factor(10).toFloat,factor(11).toFloat,factor(12).toFloat,factor(13).toFloat,factor(14).toFloat
+                        ,factor(15).toFloat,factor(16).toFloat,factor(17),factor(18).toFloat,factor(19),factor(20).toFloat,factor(21).toFloat))
+                })
+            }
         })
+
 
         ssc.start()
         ssc.awaitTermination()

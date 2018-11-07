@@ -4,7 +4,6 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
@@ -24,7 +23,7 @@ public class HttpUtil {
 
             HttpClient client = HttpClientBuilder.create().build();
             //设置请求方式
-            HttpUriRequest request = new HttpGet(url);
+            HttpGet request = new HttpGet(url);
             //发起请求
             HttpResponse response = client.execute(request);
             //获取网页实体对象
