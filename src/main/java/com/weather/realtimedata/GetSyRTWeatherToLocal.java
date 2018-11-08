@@ -15,6 +15,7 @@ import java.util.Calendar;
 public class GetSyRTWeatherToLocal extends Thread{
     private ArrayList<String> timelist;
     private int flag = 0;
+    private int index = 0;
 
     public GetSyRTWeatherToLocal() {
         timelist = new ArrayList<>();
@@ -111,8 +112,8 @@ public class GetSyRTWeatherToLocal extends Thread{
 
     public void run() {
         while(true) {
-            System.out.println("iiiii");
-            FileUtil.writeToFile(getWeatherData(TimeList()),"/root/flume-data/syrt-weather","syrtWeather");
+            System.out.println("running...");
+            FileUtil.writeToFile(getWeatherData(TimeList()),"/root/flume-data/syrt-weather/","syrtWeather-" + index++);
 
             try {
                 Thread.sleep(5000);

@@ -17,14 +17,14 @@ public class FileUtil {
                     dir.mkdirs();
                     file.createNewFile();
                 }
-                FileOutputStream outStream = new FileOutputStream(file); //文件输出流将数据写入文件
+                FileOutputStream outStream = new FileOutputStream(file, true); //文件输出流将数据写入文件,true表示追加内容
                 outStream.write(sourceByte);
                 outStream.close();
             } catch (Exception e) {
                 e.printStackTrace();
-                // do something
+
             } finally {
-                // do something
+
             }
         }
     }
