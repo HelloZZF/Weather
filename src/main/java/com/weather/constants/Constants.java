@@ -48,10 +48,12 @@ public interface Constants {
      */
     float FACTOR_DEFAULT_VALUE_FOT = 999999.0000f;
     String FACTOR_DEFAULT_VALUE_STR = "999999.0000";
+    String FACTOR_DEFAULT_VALUE_CONTAIN = "999999";
     /**
      * 区站号字段名
      */
     String ASN_FIELD_NAME = "V01301";
+    String ASN_BAOTING = "59945";
     /**
      * adcode 文件名
      */

@@ -1,40 +1,30 @@
 package com.weather;
 
+import com.weather.dao.impl.syrt_weather.Crops_WeatherImpl;
+import com.weather.dao.impl.syrt_weather.Ssd_WeatherImpl;
 import com.weather.dao.impl.syrt_weather.SyRT_WeatherImpl;
+import com.weather.dao.syrt_weather.Crops_WeatherDao;
+import com.weather.dao.syrt_weather.Ssd_WeatherDao;
+import com.weather.domain.Crops;
+import com.weather.domain.Ssd;
 import com.weather.domain.SyRealTime;
 
 /**
  * Created by admin on 2018/11/4.
  */
 public class databaseTest {
-    private String city;
-    private String year;
+    private String province;
     private int month;
-    private int day;
-    private int hour;
-    private float prs;
-    private float prs_sea;
-    private float prs_max;
-    private float prs_min;
-    private float tem;
-    private float tem_max;
-    private float tem_min;
-    private float tigan;
-    private float rhu;
-    private float rhu_min;
-    private float pre_1h;
-    private float win_s_max;
-    private String win_d_s_max;
-    private float win_s_avg_2mi;
-    private String win_d_avg_2mi;
-    private float vis;
-    private float radiation;
+    private float ave_tem;
+    private float ave_rhu;
+    private float pre_20_20;
+    private float max_win;
+    private float ssd;
+    private float ssd_month;
 
     public static void main(String[] args) {
-        SyRealTime st = new SyRealTime("sanya","2018",11,04,22,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,1.0f,
-                1.0f,1.0f,1.0f,1.0f,1.0f,"111",1.0f,"111",1.0f,1.0f);
-        SyRT_WeatherImpl imp = new SyRT_WeatherImpl();
-        imp.delectAll();
-        imp.insert(st);
+        Ssd ssd = new Ssd("hainan",2,1.0f,2.9f,2.9f,2.9f,2.9f,2.9f);
+        Ssd_WeatherDao dao = new Ssd_WeatherImpl();
+        dao.insert(ssd);
     }
 }
