@@ -31,11 +31,13 @@ object CropsWeather_Ops {
             val asn = !f._1.split(" ")(0).equals(Constants.ASN_FIELD_NAME)
             var default = true
             val values = f._2
-            if (values(17).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(16).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
-                values(24).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(36).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
-                values(31).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(45).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+            if (values(15).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(17).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+                values(16).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(24).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+                values(36).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(31).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+                values(32).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(45).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
                 values(48).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(61).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
-                values(85).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(92).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)){
+                values(62).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(85).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+                values(92).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(93).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)){
                 default = false
             }
             asn && default
@@ -56,11 +58,14 @@ object CropsWeather_Ops {
             var ave_tem_diffs: Float = 0
             var min_tem_less_0s: Float = 0
             var max_tem_more_30s: Float = 0
+            var max_tem_more_35s: Float = 0
             var ave_rhus: Float = 0
             var pre_20_20s: Float = 0
             var pre_more_25s: Float = 0
+            var pre_more_50s: Float = 0
             var ave_wins: Float = 0
             var max_win_more_12s: Float = 0
+            var max_win_more_15s: Float = 0
             var sum = 0;
             for (facotrs <- values) {
                 sum = sum + 1
@@ -71,14 +76,18 @@ object CropsWeather_Ops {
                 ave_tem_diffs = ave_tem_diffs + facotrs(24).toFloat
                 min_tem_less_0s = min_tem_less_0s + facotrs(36).toFloat
                 max_tem_more_30s = max_tem_more_30s + facotrs(31).toFloat
+                max_tem_more_35s = max_tem_more_35s + facotrs(32).toFloat
                 ave_rhus = ave_rhus + facotrs(45).toFloat
                 pre_20_20s = pre_20_20s + facotrs(48).toFloat
                 pre_more_25s = pre_more_25s + facotrs(61).toFloat
+                pre_more_50s = pre_more_50s + facotrs(62).toFloat
                 ave_wins = ave_wins + facotrs(85).toFloat
                 max_win_more_12s = max_win_more_12s + facotrs(92).toFloat
+                max_win_more_15s = max_win_more_15s + facotrs(93).toFloat
 
             }
             val crops = new Crops()
+
             crops.setProvince("hainan")
             crops.setMonth(month)
             crops.setAve_tem(ave_tems/sum)
@@ -87,11 +96,14 @@ object CropsWeather_Ops {
             crops.setAve_tem_diff(ave_tem_diffs/sum)
             crops.setMin_tem_less_0(min_tem_less_0s/sum)
             crops.setMax_tem_more_30(max_tem_more_30s/sum)
+            crops.setMax_tem_more_35(max_tem_more_35s/sum)
             crops.setAve_rhu(ave_rhus/sum)
             crops.setPre_20_20(pre_20_20s/sum)
             crops.setPre_more_25(pre_more_25s/sum)
+            crops.setPre_more_50(pre_more_50s/sum)
             crops.setAve_win(ave_wins/sum)
             crops.setMax_win_more_12(max_win_more_12s/sum)
+            crops.setMax_win_more_15(max_win_more_15s/sum)
 
             val dao = new Crops_WeatherImpl()
             dao.insert(crops)

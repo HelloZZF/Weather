@@ -1,8 +1,8 @@
-package com.weather.cropsweather
+package com.weather.hourseweather
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrt_weather.{Hourse_WeatherImpl, Ssd_WeatherImpl}
-import com.weather.domain.{Hourse, Ssd}
+import com.weather.dao.impl.syrt_weather.Hourse_WeatherImpl
+import com.weather.domain.Hourse
 import com.weather.util.SparkUtil
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -73,16 +73,16 @@ object HourseWeather_Ops {
                 val hourse = new Hourse()
                 hourse.setAsn(asn)
                 hourse.setMonth(month)
-                hourse.setAve_tem(ave_tems)
-                hourse.setMax_tem_more_30(max_tem_more_30)
-                hourse.setMax_tem_more_35(max_tem_more_35)
-                hourse.setAve_rhu(ave_rhu)
-                hourse.setPre_20_20(pre_20_20)
-                hourse.setPre_more_25(pre_more_25)
-                hourse.setMax_conti_pre(max_conti_pre)
-                hourse.setAve_win(ave_win)
-                hourse.setMax_win_more_10(max_win_more_10)
-                hourse.setMax_win_more_12(max_win_more_12)
+                hourse.setAve_tem(ave_tems/sum)
+                hourse.setMax_tem_more_30(max_tem_more_30/sum)
+                hourse.setMax_tem_more_35(max_tem_more_35/sum)
+                hourse.setAve_rhu(ave_rhu/sum)
+                hourse.setPre_20_20(pre_20_20/sum)
+                hourse.setPre_more_25(pre_more_25/sum)
+                hourse.setMax_conti_pre(max_conti_pre/sum)
+                hourse.setAve_win(ave_win/sum)
+                hourse.setMax_win_more_10(max_win_more_10/sum)
+                hourse.setMax_win_more_12(max_win_more_12/sum)
                 val dao = new Hourse_WeatherImpl()
                 dao.insert(hourse)
 

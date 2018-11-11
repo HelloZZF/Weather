@@ -1,8 +1,8 @@
-package com.weather.cropsweather
+package com.weather.ssdweather
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrt_weather.{Crops_WeatherImpl, Ssd_WeatherImpl}
-import com.weather.domain.{Crops, Ssd}
+import com.weather.dao.impl.syrt_weather.Ssd_WeatherImpl
+import com.weather.domain.Ssd
 import com.weather.util.SparkUtil
 import org.apache.spark.{SparkConf, SparkContext}
 

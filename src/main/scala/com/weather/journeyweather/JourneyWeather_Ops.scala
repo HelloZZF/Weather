@@ -1,4 +1,4 @@
-package com.weather.cropsweather
+package com.weather.journeyweather
 
 import com.weather.constants.Constants
 import com.weather.dao.impl.syrt_weather.Journey_WeatherImpl
