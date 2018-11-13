@@ -9,6 +9,8 @@ public class Hourse implements Serializable{
     private String asn;
     private int month;
     private float ave_tem;
+    private float ave_max_tem;
+    private float ave_min_tem;
     private float max_tem_more_30;
     private float max_tem_more_35;
     private float ave_rhu;
@@ -19,10 +21,12 @@ public class Hourse implements Serializable{
     private float max_win_more_10;
     private float max_win_more_12;
 
-    public Hourse(String asn, int month, float ave_tem, float max_tem_more_30, float max_tem_more_35, float ave_rhu, float pre_20_20, float pre_more_25, float max_conti_pre, float ave_win, float max_win_more_10, float max_win_more_12) {
+    public Hourse(String asn, int month, float ave_tem, float ave_max_tem, float ave_min_tem, float max_tem_more_30, float max_tem_more_35, float ave_rhu, float pre_20_20, float pre_more_25, float max_conti_pre, float ave_win, float max_win_more_10, float max_win_more_12) {
         this.asn = asn;
         this.month = month;
         this.ave_tem = ave_tem;
+        this.ave_max_tem = ave_max_tem;
+        this.ave_min_tem = ave_min_tem;
         this.max_tem_more_30 = max_tem_more_30;
         this.max_tem_more_35 = max_tem_more_35;
         this.ave_rhu = ave_rhu;
@@ -42,6 +46,8 @@ public class Hourse implements Serializable{
                 "asn='" + asn + '\'' +
                 ", month=" + month +
                 ", ave_tem=" + ave_tem +
+                ", ave_max_tem=" + ave_max_tem +
+                ", ave_min_tem=" + ave_min_tem +
                 ", max_tem_more_30=" + max_tem_more_30 +
                 ", max_tem_more_35=" + max_tem_more_35 +
                 ", ave_rhu=" + ave_rhu +
@@ -76,6 +82,22 @@ public class Hourse implements Serializable{
 
     public void setAve_tem(float ave_tem) {
         this.ave_tem = ave_tem;
+    }
+
+    public float getAve_max_tem() {
+        return ave_max_tem;
+    }
+
+    public void setAve_max_tem(float ave_max_tem) {
+        this.ave_max_tem = ave_max_tem;
+    }
+
+    public float getAve_min_tem() {
+        return ave_min_tem;
+    }
+
+    public void setAve_min_tem(float ave_min_tem) {
+        this.ave_min_tem = ave_min_tem;
     }
 
     public float getMax_tem_more_30() {

@@ -26,6 +26,7 @@ object HourseWeather_Ops {
                 var default = true
                 val values = f._2
                 if (values(15).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(31).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
+                    values(16).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(17).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
                     values(32).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(45).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
                     values(48).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(61).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
                     values(65).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||values(85).contains(Constants.FACTOR_DEFAULT_VALUE_CONTAIN)||
@@ -34,6 +35,9 @@ object HourseWeather_Ops {
                 }
                 asn && default
             })
+//            .map(f => {
+//                (f._1.split(" ")(0), f._2)
+//            })
             .groupByKey()
             .map(f => {
                 (new SecondSortObj(f._1.split(" ")(0).toInt, f._1.split(" ")(1).toInt), f._2)
@@ -45,6 +49,8 @@ object HourseWeather_Ops {
                 var asn: String = ""
                 var month: Int = 0
                 var ave_tems: Float = 0
+                var ave_max_tems: Float = 0
+                var ave_min_tems: Float = 0
                 var max_tem_more_30: Float = 0
                 var max_tem_more_35: Float = 0
                 var ave_rhu: Float = 0
@@ -60,6 +66,8 @@ object HourseWeather_Ops {
                     asn = facotrs(0)
                     month = facotrs(2).toInt
                     ave_tems = ave_tems + facotrs(15).toFloat
+                    ave_max_tems = ave_max_tems + facotrs(16).toFloat
+                    ave_min_tems = ave_min_tems + facotrs(17).toFloat
                     max_tem_more_30 = max_tem_more_30 + facotrs(31).toFloat
                     max_tem_more_35 = max_tem_more_35 + facotrs(32).toFloat
                     ave_rhu = ave_rhu + facotrs(45).toFloat
@@ -74,6 +82,8 @@ object HourseWeather_Ops {
                 hourse.setAsn(asn)
                 hourse.setMonth(month)
                 hourse.setAve_tem(ave_tems/sum)
+                hourse.setAve_max_tem(ave_max_tems/sum)
+                hourse.setAve_min_tem(ave_min_tems/sum)
                 hourse.setMax_tem_more_30(max_tem_more_30/sum)
                 hourse.setMax_tem_more_35(max_tem_more_35/sum)
                 hourse.setAve_rhu(ave_rhu/sum)
