@@ -1,4 +1,4 @@
-package mlib
+package com.weather.mlib
 
 import java.io.{BufferedReader, InputStreamReader}
 

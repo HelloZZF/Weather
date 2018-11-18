@@ -54,6 +54,9 @@ public interface Constants {
      */
     String ASN_FIELD_NAME = "V01301";
     String ASN_BAOTING = "59945";
+    String ASN_HAIKOU = "59758";
+    String ASN_QIONGHAI = "59855";
+
     /**
      * adcode 文件名
      */
