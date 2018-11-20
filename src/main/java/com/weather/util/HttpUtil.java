@@ -9,9 +9,6 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-/**
- * Created by admin on 2018/7/25.
- */
 public class HttpUtil {
     public static String getHttpContent(String url) {
         /**

@@ -1,12 +1,13 @@
-package com.weather.mlib
+package com.weather.mlib.console
 
 import java.io.{BufferedReader, InputStreamReader}
 
 import com.weather.dao.impl.syrt_weather.CropsCondition_WeatherImpl
 import com.weather.domain.CropsCondition
-import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.tree.model.RandomForestModel
+import org.apache.spark.{SparkConf, SparkContext}
+
 import scala.collection.JavaConversions._
 
 /**
