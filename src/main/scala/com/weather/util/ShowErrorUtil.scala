@@ -10,9 +10,9 @@ object ShowErrorUtil {
 
     def showError(test : RDD[Tuple2[Double,Double]]) = {
 
-//        test.foreach(f => {
-//            println("真实值：" + f._1 + " 预测值:" + f._2)
-//        })
+        test.foreach(f => {
+            println("真实值：" + f._1 + " 预测值:" + f._2)
+        })
 
         //多分类评价器
         val metrics = new MulticlassMetrics(test)
