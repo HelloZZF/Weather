@@ -7,18 +7,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e88818-2ba9-4366-9f6a-2512ff75c68a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/Win_ClassificationModel.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/country_weather/CountryWeatherMrOps$FactorsWritable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/country_weather/CountryWeatherMrOps$MyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/country_weather/CountryWeatherMrOps$MyReducer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/country_weather/CountryWeatherMrOps.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/CropsConditionWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/CropsWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/HourseWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/JourneyWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/SsdWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/impl/syrt_weather/SyRTWeatherImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/CropsConditionWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/CropsWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/HourseWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/JourneyWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/SsdWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/dao/syrt_weather/SyRTWeatherDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/hainan_weather/HaiNanWeatherMrOps$FactorsWritable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/hainan_weather/HaiNanWeatherMrOps$MyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/hainan_weather/HaiNanWeatherMrOps$MyReducer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/weather/hainan_weather/HaiNanWeatherMrOps.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/cropsweather/CropsWeatherOps$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/cropsweather/CropsWeatherOps$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/hourseweather/HourseWeatherOps$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/hourseweather/HourseWeatherOps$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/journeyweather/JourneyWeatherOps$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/journeyweather/JourneyWeatherOps$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$$anonfun$allCrops$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$$anonfun$allCrops$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$$anonfun$allCrops$2.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$$anonfun$allCrops$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/CropsConsole.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/WinConsole$.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/console/WinConsole$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel$.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/ssdweather/SsdWeatherOps$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/ssdweather/SsdWeatherOps$$anonfun$main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/weather/syrtweather/SyRealTimeWeatherOps$$anonfun$main$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/classes/com/weather/syrtweather/SyRealTimeWeatherOps$$anonfun$main$1$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/weather/databaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/weather/databaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/util/ShowErrorUtil.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/util/ShowErrorUtil.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/CropsDataPreprocessAndAnalysis.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/CropsDataPreprocessAndAnalysis.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/Win_ClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/WinClassificationModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/Win_RegressorModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/Win_RegressorModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsDecisionTreeClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsGradientBoostedTreesClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsGradientBoostedTreesClassificationModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsLogisticRegressionWithSGDModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsLogisticRegressionWithSGDModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsNaiveBayesModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsNaiveBayesModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsRandomForestClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsRandomForestClassificationModel.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsSVMWithSGDModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsSVMWithSGDModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/cropsweather/CropsWeatherOps.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/cropsweather/CropsWeatherOps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/hourseweather/HourseWeatherOps.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/hourseweather/HourseWeatherOps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/journeyweather/JourneyWeatherOps.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/journeyweather/JourneyWeatherOps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/console/CropsConsole.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/console/CropsConsole.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/console/WinConsole.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/console/WinConsole.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/ssdweather/SsdWeatherOps.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/ssdweather/SsdWeatherOps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/weather/syrtweather/SyRealTimeWeatherOps.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/weather/syrtweather/SyRealTimeWeatherOps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/weather/databaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/weather/databaseTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/country_weather/CountryWeatherMrOps.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/countryweather/CountryWeatherMrOps.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/CropsConditionWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/CropsConditionWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/CropsWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/CropsWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/HourseWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/HourseWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/JourneyWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/JourneyWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/SsdWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/SsdWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/SyRTWeatherImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/SyRTWeatherImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/CropsConditionWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/CropsConditionWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/CropsWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/CropsWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/HourseWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/HourseWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/JourneyWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/JourneyWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/SsdWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/SsdWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrt_weather/SyRTWeatherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/dao/syrtweather/SyRTWeatherDao.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/weather/hainan_weather/HaiNanWeatherMrOps.java" afterPath="$PROJECT_DIR$/src/main/java/com/weather/hainanweather/HaiNanWeatherMrOps.java" />
     </list>
     <ignored path="Weather.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,19 +98,17 @@
       <file leaf-file-name="CropsDataPreprocessAndAnalysis.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/CropsDataPreprocessAndAnalysis.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3048">
+            <state relative-caret-position="3444">
               <caret line="169" column="42" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
-              <folding>
-                <element signature="e#37#81#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WinDataPreprocessAndAnalysis.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WinDataPreprocessAndAnalysis.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/WinDataPreprocessAndAnalysis.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="1050">
               <caret line="57" column="40" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="40" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
@@ -73,18 +120,68 @@
       <file leaf-file-name="CropsDecisionTreeClassificationModel.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="504">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CropsGradientBoostedTreesClassificationModel.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsGradientBoostedTreesClassificationModel.scala">
+      <file leaf-file-name="WinSVMWithSGDModel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinLogisticRegressionWithSGDModel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinClassificationModel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/WinClassificationModel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinNaiveBayesModel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinGradientBoostedTreesClassificationModel.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
               <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinDecisionTreeClassificationModel.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinDecisionTreeClassificationModel.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -93,7 +190,7 @@
       <file leaf-file-name="CropsLogisticRegressionWithSGDModel.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsLogisticRegressionWithSGDModel.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="147">
               <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
@@ -149,14 +246,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsRandomForestClassificationModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/CropsDecisionTreeClassificationModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/CropsDataPreprocessAndAnalysis.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/Win_RegressorModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/CropsDataPreprocessAndAnalysis.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/CropsDecisionTreeClassificationModel.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/util/ShowErrorUtil.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinRandomForestClassificationModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/regressor/WinDecisionTreeClassificationModel.scala" />
@@ -173,6 +265,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/regressor/WinSRandomForestRegressorModel.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/WinDataPreprocessAndAnalysis.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/weather/hourseweather/HourseWeatherOps.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala" />
       </list>
     </option>
   </component>
@@ -229,6 +326,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -841,7 +941,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hainan_weather" />
+              <option name="myItemId" value="hainanweather" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -904,10 +1004,6 @@
               <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="syrt_weather" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -939,7 +1035,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="syrt_weather" />
+              <option name="myItemId" value="syrtweather" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -969,7 +1065,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="country_weather" />
+              <option name="myItemId" value="countryweather" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1035,9 +1131,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1073,27 +1166,7 @@
       <recent name="E:\IDEA_Project\Weather\src\main\resources\produce" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WinDataPreprocessAndAnalysis">
-    <configuration default="false" name="WinMGradientBoostedTressRegressorModel" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.weather.mlib.model.win.regressor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.weather.mlib.model.win.regressor.WinMGradientBoostedTressRegressorModel" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Weather" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.CropsDecisionTreeClassificationModel">
     <configuration default="false" name="WinMRandomForestRegressorModel" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1162,6 +1235,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.weather.mlib.model.data.WinDataPreprocessAndAnalysis" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Weather" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CropsDecisionTreeClassificationModel" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.weather.mlib.model.crops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.weather.mlib.model.crops.CropsDecisionTreeClassificationModel" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1871,19 +1964,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.package" />
-      <item index="1" class="java.lang.String" itemvalue="Application.WinMGradientBoostedTressRegressorModel" />
-      <item index="2" class="java.lang.String" itemvalue="Application.WinMRandomForestRegressorModel" />
-      <item index="3" class="java.lang.String" itemvalue="Application.WinSDecisionTreeRegressorModel" />
-      <item index="4" class="java.lang.String" itemvalue="Application.WinSRandomForestRegressorModel" />
-      <item index="5" class="java.lang.String" itemvalue="Application.WinDataPreprocessAndAnalysis" />
+      <item index="1" class="java.lang.String" itemvalue="Application.WinMRandomForestRegressorModel" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WinSDecisionTreeRegressorModel" />
+      <item index="3" class="java.lang.String" itemvalue="Application.WinSRandomForestRegressorModel" />
+      <item index="4" class="java.lang.String" itemvalue="Application.WinDataPreprocessAndAnalysis" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CropsDecisionTreeClassificationModel" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.WinDataPreprocessAndAnalysis" />
-        <item index="1" class="java.lang.String" itemvalue="Application.WinSRandomForestRegressorModel" />
-        <item index="2" class="java.lang.String" itemvalue="Application.WinSDecisionTreeRegressorModel" />
-        <item index="3" class="java.lang.String" itemvalue="Application.WinMRandomForestRegressorModel" />
-        <item index="4" class="java.lang.String" itemvalue="Application.WinMGradientBoostedTressRegressorModel" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CropsDecisionTreeClassificationModel" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WinDataPreprocessAndAnalysis" />
+        <item index="2" class="java.lang.String" itemvalue="Application.WinSRandomForestRegressorModel" />
+        <item index="3" class="java.lang.String" itemvalue="Application.WinSDecisionTreeRegressorModel" />
+        <item index="4" class="java.lang.String" itemvalue="Application.WinMRandomForestRegressorModel" />
       </list>
     </recent_temporary>
   </component>
@@ -1930,27 +2023,28 @@
       <workItem from="1542519342937" duration="27860000" />
       <workItem from="1542640116116" duration="128000" />
       <workItem from="1542688794863" duration="23399000" />
-      <workItem from="1542778434237" duration="15147000" />
+      <workItem from="1542778434237" duration="15602000" />
+      <workItem from="1542881879804" duration="7418000" />
+      <workItem from="1542898789699" duration="141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275771000" />
+    <option name="totallyTimeSpent" value="283785000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33509833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1959,12 +2053,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2076,7 +2171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2084,7 +2178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2099,7 +2192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2107,7 +2199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2115,15 +2206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/WinClassificationModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2131,7 +2213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2139,7 +2220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2147,7 +2227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2155,49 +2234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#26#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinDecisionTreeClassificationModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="24" column="77" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.10/1.6.2/spark-mllib_2.10-1.6.2-sources.jar!/org/apache/spark/mllib/tree/DecisionTree.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="238" column="48" selection-start-line="238" selection-start-column="40" selection-end-line="238" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2205,15 +2241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2221,7 +2248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2229,7 +2255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="83" column="75" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2237,10 +2262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="395" column="48" selection-start-line="395" selection-start-column="40" selection-end-line="395" selection-end-column="48" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#839#865#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2248,9 +2269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-          <folding>
-            <element signature="e#46#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2258,7 +2276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2266,7 +2283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2274,9 +2290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
-          <folding>
-            <element signature="e#46#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2284,7 +2297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2292,9 +2304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-          <folding>
-            <element signature="e#46#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2302,9 +2311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-          <folding>
-            <element signature="e#46#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2312,11 +2318,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/country_weather/CountryWeatherMrOps.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/countryweather/CountryWeatherMrOps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1512">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -2324,7 +2329,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/CropsConditionWeatherImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/CropsConditionWeatherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -2336,11 +2341,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="69" column="44" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrt_weather/JourneyWeatherImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/weather/dao/impl/syrtweather/JourneyWeatherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
@@ -2356,25 +2360,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsGradientBoostedTreesClassificationModel.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsLogisticRegressionWithSGDModel.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="147">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
@@ -2382,11 +2370,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/CropsDataPreprocessAndAnalysis.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3048">
+        <state relative-caret-position="3444">
           <caret line="169" column="42" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
-          <folding>
-            <element signature="e#37#81#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2394,19 +2380,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#35#73#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/data/WinDataPreprocessAndAnalysis.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="1050">
           <caret line="57" column="40" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="40" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsGradientBoostedTreesClassificationModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinDecisionTreeClassificationModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-mllib_2.10/1.6.2/spark-mllib_2.10-1.6.2-sources.jar!/org/apache/spark/mllib/tree/DecisionTree.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="201" column="6" selection-start-line="201" selection-start-column="6" selection-end-line="201" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/crops/CropsDecisionTreeClassificationModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinSVMWithSGDModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinLogisticRegressionWithSGDModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/WinClassificationModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinNaiveBayesModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/weather/mlib/model/win/classification/WinGradientBoostedTreesClassificationModel.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -6,7 +6,8 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * 通过找到支持向量从而获得分类平面的方法，称为支持向量机。
+  * 因此支持向量机的目的是，通过划分最优的平面从而使不同的类别分开
   */
 object WinSVMWithSGDModel {
     def main(args: Array[String]): Unit = {

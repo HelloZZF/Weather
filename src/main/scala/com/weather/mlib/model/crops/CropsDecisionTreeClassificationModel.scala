@@ -6,7 +6,10 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * ID3（它偏向于具有大量值的属性） 衍生 C4.5(entropy) CART(Gini)
+  * 属性选择度量又称分裂规则，因为它们决定给定节点上的元组如何分裂。
+  * 具有最好度量得分的属性被选作给定元组的分裂属性。
+  * 比较流行的属性选择度量有--信息增益、信息增益率和Gini指标。
   */
 object CropsDecisionTreeClassificationModel {
     def main(args: Array[String]): Unit = {
@@ -22,15 +25,16 @@ object CropsDecisionTreeClassificationModel {
         //属性对的格式
         val categoricalFeaturesInfo = Map[Int, Int]()
         //计算信息增益的计算准则
-        val impurity = "variance"
+        val impurity = "gini"
         //树的深度
-        //只有深度在8以上预测值才会偏向于1不然为0.9几
-        val maxDepth = 12
+        val maxDepth = 5
         //连续性特征最大切分的数据集合数量
         val maxBins = 32
+        //分类类数
+        val numclass = 2
 
         //决策树模型训练
-        val model = DecisionTree.trainRegressor(trainingData, categoricalFeaturesInfo, impurity,
+        val model = DecisionTree.trainClassifier(trainingData, numclass, categoricalFeaturesInfo, impurity,
             maxDepth, maxBins)
 
         val labelsAndPredictions = testData.map { point =>
@@ -40,10 +44,10 @@ object CropsDecisionTreeClassificationModel {
 
         //误差评估
         ShowErrorUtil.showError(labelsAndPredictions)
-//        MulticlassMetrics Precision: 0.4841002369114752
-//        Test Mean Squared Error = 0.006257685098207834
-//        Error Diff = 0.01257976443921329
-//        Error rate = 0.5158997630885248
+//        MulticlassMetrics Precision: 0.9865674110835401
+//        Test Mean Squared Error = 0.013432588916459844
+//        Error Diff = 0.013432588916459884
+//        Error rate = 0.013432588916459884
 
         //保存模型
         //model.save(sc, "C:\\Users\\admin\\Desktop\\CropsDecisionTreeClassificationModel")

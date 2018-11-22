@@ -1,7 +1,7 @@
 package com.weather.ssdweather
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrt_weather.SsdWeatherImpl
+import com.weather.dao.impl.syrtweather.SsdWeatherImpl
 import com.weather.domain.Ssd
 import com.weather.util.SparkUtil
 import org.apache.spark.{SparkConf, SparkContext}

@@ -6,7 +6,11 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * 贝叶斯公式：
+  * P(A|B)=P(A)P(B|A)/P(B)
+  * 朴素贝叶斯法是基于贝叶斯定理与特征条件独立假设的分类方法
+  * 朴素贝叶斯分类器基于一个简单的假定：给定目标值时属性之间相互条件独立。
+  * 每个待分项分配到集合中具体分类的概率是多少
   */
 object WinNaiveBayesModel {
     def main(args: Array[String]): Unit = {

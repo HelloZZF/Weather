@@ -2,7 +2,7 @@ package com.weather.syrtweather
 
 import com.weather.conf.ConfigurationManager
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrt_weather.SyRTWeatherImpl
+import com.weather.dao.impl.syrtweather.SyRTWeatherImpl
 import com.weather.domain.SyRealTime
 import com.weather.util.SparkUtil
 import kafka.serializer.StringDecoder

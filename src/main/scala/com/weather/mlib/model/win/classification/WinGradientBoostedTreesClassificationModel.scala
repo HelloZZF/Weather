@@ -7,7 +7,9 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * 类似于随机梯度下降书算法，一个模型中有若干个属性值构成，每个属性值在开始训练时
+  * 有相同的权重，之后不断地将模型计算结果和真实值进行比较。如果出错则降低在特定方向
+  * 的损失
   */
 object WinGradientBoostedTreesClassificationModel {
     def main(args: Array[String]): Unit = {

@@ -6,7 +6,8 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * 逻辑回归的计算可以转化成数据集的特征向量与系数θ共同完成，然后求得其加权和最为最终的判断的结果
+  * 最终逻辑回归问题又称为对系数θ的求值问题
   */
 object WinLogisticRegressionWithSGDModel {
     def main(args: Array[String]): Unit = {
