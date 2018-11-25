@@ -1,4 +1,4 @@
-package com.weather.dao.syrtweather;
+package com.weather.dao;
 
 import com.weather.domain.SyRealTime;
 

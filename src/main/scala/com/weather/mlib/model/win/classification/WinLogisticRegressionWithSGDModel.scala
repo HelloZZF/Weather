@@ -19,6 +19,11 @@ object WinLogisticRegressionWithSGDModel {
         //按比例随机切分为训练数据和测试数据两部分
         val splits = data.randomSplit(Array(0.7, 0.3))
         val (trainingData, testData) = (splits(0), splits(1))
+        /**
+          * 数据标准化（正态分布）
+          * 数据降维（PCA,SVD）
+          * 数据正则化
+          */
         //使用逻辑回归模型训练
         val model = LogisticRegressionWithSGD.train(trainingData, 50)
 

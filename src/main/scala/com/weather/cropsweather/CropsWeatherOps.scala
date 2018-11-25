@@ -3,7 +3,7 @@ package com.weather.cropsweather
 import java.util
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrtweather.CropsWeatherImpl
+import com.weather.dao.impl.CropsWeatherImpl
 import com.weather.domain.Crops
 import com.weather.util.SparkUtil
 import org.apache.spark.rdd.RDD

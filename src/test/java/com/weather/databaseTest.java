@@ -1,7 +1,7 @@
 package com.weather;
 
-import com.weather.dao.impl.syrtweather.CropsConditionWeatherImpl;
-import com.weather.dao.syrtweather.CropsConditionWeatherDao;
+import com.weather.dao.impl.CropsConditionWeatherImpl;
+import com.weather.dao.CropsConditionWeatherDao;
 import com.weather.domain.CropsCondition;
 
 /**

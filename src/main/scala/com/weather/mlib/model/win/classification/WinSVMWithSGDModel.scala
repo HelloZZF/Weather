@@ -6,6 +6,7 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
+  * 线性支持向量机
   * 通过找到支持向量从而获得分类平面的方法，称为支持向量机。
   * 因此支持向量机的目的是，通过划分最优的平面从而使不同的类别分开
   */
@@ -19,7 +20,7 @@ object WinSVMWithSGDModel {
         //按比例随机切分为训练数据和测试数据两部分
         val splits = data.randomSplit(Array(0.7, 0.3))
         val (trainingData, testData) = (splits(0), splits(1))
-        //使用支持向量机模型训练
+        //使用线性支持向量机模型训练
         val model = SVMWithSGD.train(trainingData, 50)
 
         val labelsAndPredictions = testData.map(f => {

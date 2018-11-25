@@ -1,7 +1,7 @@
 package com.weather.hourseweather
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrtweather.HourseWeatherImpl
+import com.weather.dao.impl.HourseWeatherImpl
 import com.weather.domain.Hourse
 import com.weather.util.SparkUtil
 import org.apache.spark.{SparkConf, SparkContext}

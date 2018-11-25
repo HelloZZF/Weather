@@ -6,7 +6,11 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by admin on 2018/11/20.
+  * 决策树和朴素贝叶斯不受数据标准化的影响
+  * ID3（它偏向于具有大量值的属性） 衍生 C4.5(entropy) CART(Gini)
+  * 属性选择度量又称分裂规则，因为它们决定给定节点上的元组如何分裂。
+  * 具有最好度量得分的属性被选作给定元组的分裂属性。
+  * 比较流行的属性选择度量有--信息增益、信息增益率和Gini指标。
   */
 object WinDecisionTreeClassificationModel {
     def main(args: Array[String]): Unit = {
@@ -15,7 +19,7 @@ object WinDecisionTreeClassificationModel {
         sc.setLogLevel("ERROR")
         //加载LibSVM格式的数据
         val data = MLUtils.loadLibSVMFile(sc, "C:\\Users\\admin\\Desktop\\WinC.txt")
-        //按比例随机切分为训练数据和测试数据两部分
+        //按比例随机切分为训练数据和测试数据两部分（交叉验证）
         val splits = data.randomSplit(Array(0.7, 0.3))
         val (trainingData, testData) = (splits(0), splits(1))
 
@@ -27,7 +31,7 @@ object WinDecisionTreeClassificationModel {
         val categoricalFeaturesInfo = Map[Int, Int]()
         //类别数量
         val numClasses = 2
-        //计算信息增益的计算准则
+        //计算信息增益的计算准则（不纯度的度量方式）
         val impurity = "gini"
         //树的深度
         val maxDepth = 6

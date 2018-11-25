@@ -1,7 +1,7 @@
 package com.weather.journeyweather
 
 import com.weather.constants.Constants
-import com.weather.dao.impl.syrtweather.JourneyWeatherImpl
+import com.weather.dao.impl.JourneyWeatherImpl
 import com.weather.domain.Journey
 import com.weather.util.SparkUtil
 import org.apache.spark.{SparkConf, SparkContext}

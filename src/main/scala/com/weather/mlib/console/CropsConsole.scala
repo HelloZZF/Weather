@@ -2,7 +2,7 @@ package com.weather.mlib.console
 
 import java.io.{BufferedReader, InputStreamReader}
 
-import com.weather.dao.impl.syrtweather.CropsConditionWeatherImpl
+import com.weather.dao.impl.CropsConditionWeatherImpl
 import com.weather.domain.CropsCondition
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.tree.model.RandomForestModel

@@ -1,6 +1,6 @@
-package com.weather.dao.impl.syrtweather;
+package com.weather.dao.impl;
 
-import com.weather.dao.syrtweather.CropsConditionWeatherDao;
+import com.weather.dao.CropsConditionWeatherDao;
 import com.weather.domain.CropsCondition;
 import com.weather.util.DBCPUtil;
 import org.apache.commons.dbutils.QueryRunner;

@@ -67,8 +67,8 @@ public class GetSyRTWeather extends Thread {
 
 	public String getWeatherData(String time) {
 
-        //气象局坑爹啊，这个api只能获取当前时间之前7/8个小时的数据,也有可能是UTC世界统一时间
-		String json =  HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=541311836471YeEp7&pwd=d1CvKmk" +
+        //气象局坑爹啊，这个api只能获取当前时间之前8/9个小时的数据,也有可能是UTC世界统一时间
+		String json =  HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=542954102812qDCbb&pwd=4D5Qx9Z" +
 								"&dataFormat=json" +
 								"&interfaceId=getSurfEleByTimeRangeAndStaID" +
 								"&dataCode=SURF_CHN_MUL_HOR" +
@@ -83,13 +83,13 @@ public class GetSyRTWeather extends Thread {
         JSONArray jsonDS = JSON.parseArray(jsonAll.get("DS").toString());
         JSONObject jsonFactor = JSON.parseObject(jsonDS.get(0).toString());
 
-        String radjson = HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=541316257016cvFvg&pwd=VJZfqQj" +
+        String radjson = HttpUtil.getHttpContent("http://api.data.cma.cn:8090/api?userId=542954295229kWWZi&pwd=GpuYWv6" +
                                 "&dataFormat=json" +
                                 "&interfaceId=getRadiEleByTimeRangeAndStaID" +
                                 "&dataCode=RADI_CHN_MUL_HOR2400" +
                                 "&timeRange=["+ time + "," + time + "]" +
                                 "&staIds=59945" +
-                                "&elements=V14311,V14320");
+                                "&elements=V14311");
         JSONObject radjsonAll = JSON.parseObject(radjson);
         String rad = "0";
         if (radjsonAll.getString("returnCode").equals("0")) {
