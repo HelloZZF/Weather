@@ -6,6 +6,11 @@ package com.weather.countryweather;
 import com.weather.constants.Constants;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HColumnDescriptor;
+import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -116,10 +121,12 @@ public class CountryWeatherMrOps {
     static class MyReducer extends Reducer<Text, FactorsWritable, NullWritable, Text> {
         private ArrayList<FactorsWritable> codeList;
         private ArrayList<FactorsWritable> dataList;
+
         @Override
         protected void setup(Context context) throws IOException, InterruptedException {
             codeList = new ArrayList<>();
             dataList = new ArrayList<>();
+
             //System.out.println("in setup");
         }
 
@@ -179,11 +186,13 @@ public class CountryWeatherMrOps {
         @Override
         protected void cleanup(Context context) throws IOException, InterruptedException {
             //System.out.println("in cleanup");
+
             if (!codeList.isEmpty()&&!dataList.isEmpty()) {
                 for (FactorsWritable fw : dataList) {
                     String pro = fw.getProvince();
                     for (FactorsWritable ac : codeList) {
                         if (ac.getProvince().equals(pro)) {
+
                             context.write(NullWritable.get(), new Text(new FactorsWritable(
                                     ac.getProvince(),
                                     ac.getAdcode(),
@@ -201,6 +210,7 @@ public class CountryWeatherMrOps {
                 }
 
             }
+
         }
     }
 
